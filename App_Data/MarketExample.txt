@@ -1,0 +1,22 @@
+#Modeling without feature normalization
+loadedData <- read.csv("housingdata.csv")
+HouseArea <- loadedData[["HouseArea"]] 
+PriceOfHouse <- loadedData[["PriceOfHouse"]]
+myModel <- lm(PriceOfHouse ~ HouseArea)
+plot(PriceOfHouse ~ HouseArea)
+abline(myModel, col="red")
+dataPoints <- data.frame(HouseArea=c(1000,4000,8000))
+predict(myModel, dataPoints)
+
+#Modeling with feature normalization
+normHouseArea <- (HouseArea - mean(HouseArea))/sd(HouseArea)
+normPriceOfHouse <- (PriceOfHouse - mean(PriceOfHouse))/sd(PriceOfHouse)
+normMyModel <- lm(normPriceOfHouse ~ normHouseArea)
+plot(normPriceOfHouse ~ normHouseArea)
+abline(normMyModel, col="green")
+
+#Prediction
+dataPointsNormalized <- (c(1000,4000,8000) - mean(HouseArea))/sd(HouseArea)
+dataPointsNormalized <- data.frame(normHouseArea=c(dataPointsNormalized))
+results <- predict(normMyModel, dataPointsNormalized)
+predictions <- results*sd(PriceOfHouse) + mean(PriceOfHouse)

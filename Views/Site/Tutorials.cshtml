@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Examples";
+}
+
+<div class="jumbotron" style="margin-top:30px;background:darkblue;opacity:1;color:white">
+    <h1 style="color:lightblue">@ViewBag.TopicName</h1>
+    <p class="lead" style="color:beige">@ViewBag.ShortSummary</p>
+    <p class="lead" style="color:beige">Last Updated: @ViewBag.Date</p>
+    <p>@Html.ActionLink("See example »", "TutView", "Site", new { topicID = @ViewBag.topicID }, new { @class = "btn btn-primary btn-large" })</p>
+</div>
+<nav>
+    <ul class="pager">
+            <li class="previous"> @Html.ActionLink("← Older", "Tutorials", "Site", new { topicID = ViewBag.topicID - 1 }, new { })</li>
+            <li class="next"> @Html.ActionLink("Newer →", "Tutorials", "Site", new { topicID = ViewBag.topicID + 1 }, new { })</li>
+
+    </ul>
+</nav>

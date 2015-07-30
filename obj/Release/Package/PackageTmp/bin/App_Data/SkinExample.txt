@@ -1,0 +1,10 @@
+skinData <- read.table("Skin_NonSkin.txt",header=FALSE)
+colnames(skinData) <- c("R","G","B","skin")
+skinData["skin"][skinData["skin"] == 2] <- 0
+shuffledSkinData <- skinData[sample(nrow(skinData)),]
+trainingData <- shuffledSkinData[seq(1,as.integer(.70*50859)),]
+testingData <- shuffledSkinData[seq(as.integer(.70*50859)+1,245057),]
+skModel <- glm(skin~R+G+B,data=trainingData,family=binomial())
+classifications <- ifelse(predict(skModel,newdata = testingData, type="response")>=.5, 1, 0)
+errors <- xor(classifications,testingData["skin"])
+avgErrors <- sum(errors)*(1/nrow(testingData))

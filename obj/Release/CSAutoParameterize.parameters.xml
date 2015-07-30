@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="TutorialsConnection-Web.config Connection String" description="TutorialsConnection Connection String used in web.config by the application to access the database." defaultValue="Data Source=uv6ljbgyvi.database.windows.net;Initial Catalog=Tutorials;Integrated Security=False;User ID=WeAnalyzeDB;Password=~Spekial124;Connect Timeout=60;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Jorg\\documents\\visual\ studio\ 2013\\Projects\\Open\ Source\ Data\\Open\ Source\ Data\\obj\\Release\\Package\\PackageTmp\\Views\\Web\.config$" match="/configuration/connectionStrings/add[@name='TutorialsConnection']/@connectionString" />
+  </parameter>
+  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="Data Source=(LocalDb)\v11.0;AttachDbFilename=|DataDirectory|\aspnet-Open_Source_Data-20140302121355.mdf;Initial Catalog=aspnet-Open_Source_Data-20140302121355;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Jorg\\documents\\visual\ studio\ 2013\\Projects\\Open\ Source\ Data\\Open\ Source\ Data\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="TutorialsEntities-Web.config Connection String" description="TutorialsEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/TutorialModel.csdl|res://*/TutorialModel.ssdl|res://*/TutorialModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=tcp:uv6ljbgyvi.database.windows.net;initial catalog=Tutorials;persist security info=True;user id=WeAnalyzeDB@uv6ljbgyvi;password=~Spekial124;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Jorg\\documents\\visual\ studio\ 2013\\Projects\\Open\ Source\ Data\\Open\ Source\ Data\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='TutorialsEntities']/@connectionString" />
+  </parameter>
+</parameters>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TutorialsModelStoreContainer" CdmEntityContainer="TutorialsEntities">
+    <EntitySetMapping Name="TutorialsTables">
+      <EntityTypeMapping TypeName="TutorialsModel.TutorialsTable">
+        <MappingFragment StoreEntitySet="Table">
+          <ScalarProperty Name="TopicName" ColumnName="TopicName" />
+          <ScalarProperty Name="CodeSources" ColumnName="CodeSources" />
+          <ScalarProperty Name="ShortSummary" ColumnName="ShortSummary" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Difficulty" ColumnName="Difficulty" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="Programming_Language" ColumnName="Programming Language" />
+          <ScalarProperty Name="Summary" ColumnName="Summary" />
+          <ScalarProperty Name="Outcomes" ColumnName="Outcomes" />
+          <ScalarProperty Name="BodyHtml" ColumnName="BodyHtml" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

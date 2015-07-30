@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+    <div>
+        <div class="jumbotron" style="margin-top:30px;background:lightseagreen;opacity:.9;color:white">
+            <h1>Real World Data</h1>
+            <p class="lead">Real World Data is an online community focused on applying Data Science on real life problems.
+            This site will be updated soon!
+            </p>
+            <p><a href="" class="btn btn-primary btn-large" style="background:lightseagreen;border-color:white;border-width:5px">Learn more &raquo;</a></p>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <h2>Getting started</h2>
+                <p>
+                    Real World Data provides easy to understand tutorials to help you master Data Science.
+                </p>
+                <p><a class="btn btn-default btn-primary" style="background:lightseagreen;border-color:lightblue;border-width:5px" href='@this.Url.Action("About", "Home")'>Learn more &raquo;</a></p>
+            </div>
+            <div class="col-md-4">
+                <h2>Learn from the best</h2>
+                <p>Due to the inline code commentation feature, you can study the code of the best Data Scientists with ease.</p>
+                <p><a class="btn btn-default btn-primary" style="background:lightseagreen;border-color:lightblue;border-width:5px" href='@this.Url.Action("About", "Home")'>Learn more &raquo;</a></p>
+            </div>
+            <div class="col-md-4">
+                <h2>Examples</h2>
+                <p>You can easily find a project that hold the right mix of skills and technologies suited towards your interests.</p>
+                <p><a class="btn btn-default btn-primary" style="background:lightseagreen;border-color:lightblue;border-width:5px" href='@this.Url.Action("Tutorials", "Site")'>Learn more &raquo;</a></p>
+            </div>
+        </div>
+    </div>
