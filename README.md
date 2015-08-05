@@ -1,3 +1,3 @@
 We Analyze:
-This is the Source code for my website http://www.weanalyze.azurewebsites.net
+This is the Source code for my website http://weanalyze.azurewebsites.net/
 
